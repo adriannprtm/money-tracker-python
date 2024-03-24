@@ -2,13 +2,36 @@ import matplotlib.pyplot as plt
 from datetime import datetime
 
 def login():
-    username = input("Masukkan username: ")
-    password = input("Masukkan password: ")
+    print("\n\n\t╔═════════════════════════════════════════════════════╗")
+    print("\t║            $$$$$ MONEY TRACKER $$$$$                ║")
+    print("\t╚═════════════════════════════════════════════════════╝")
+    print("\n\t╔═════════════════════════════════════════════════════╗")
+    print("\t║     ooooooooooooooo  LOGIN  oooooooooooooooo        ║")
+    print("\t║═════════════════════════════════════════════════════║")
+    username = input("\t              Masukkan username: ")
+    password = input("\t              Masukkan password: ")
+    print("\t╚═════════════════════════════════════════════════════╝")
 
+    # Validasi username dan password
     if username == "kelompokB6" and password == "123":
+        print("\t            Login berhasil! Selamat datang, Admin!")
         return True
     else:
+        print("\t    Username atau password salah. Silakan coba lagi.")
         return False
+
+
+def menu():
+    print("\n\t╔═════════════════════════════════════════════════════╗")
+    print("\t║                >>>>> MENU <<<<<                     ║")
+    print("\t║═════════════════════════════════════════════════════║")
+    print("\t║                1. Pemasukan                         ║")
+    print("\t║                2. Pengeluaran                       ║")
+    print("\t║                3. Rekap Data                        ║")
+    print("\t║                4. Lihat daftar transaksi            ║")
+    print("\t║                5. Grafik                            ║")
+    print("\t║                6. Keluar                            ║")
+    print("\t╚═════════════════════════════════════════════════════╝")
 
 
 def input_saldo(saldo, list_transaksi):
@@ -54,15 +77,18 @@ def pengeluaran(saldo, list_transaksi):
 
 
 def TampilanList(list_transaksi):
-    print("                            <<<<  PEMASUKAN/PENGELUARAN  >>>                        ")
-    print('===========================================================================================')
-    print('|    Tanggal      |    Katagori     |     Nama Kebutuhan      |   Nominal   |    Saldo    |')
-    print('===========================================================================================')
+    print("\n\n\t╔═════════════════════════════════════════════════════════════════════════════════════════╗")
+    print("\t║                             <<<<  PEMASUKAN/PENGELUARAN  >>>                            ║")
+    print("\t╚═════════════════════════════════════════════════════════════════════════════════════════╝")
+    print('\t===========================================================================================')
+    print('\t|    Tanggal      |    Katagori     |     Nama Kebutuhan      |   Nominal   |    Saldo    |')
+    print('\t===========================================================================================')
     
 
     for transaksi in list_transaksi:
         tanggal, kategori, nama_kebutuhan, nominal, saldo = transaksi
-        print(f"|  {tanggal.strftime('%Y-%m-%d'):<13}  | {kategori:<15} | {nama_kebutuhan:<23} | {nominal:>11} | {saldo:>11} |")
+        print(f"\t|  {tanggal.strftime('%Y-%m-%d'):<13}  | {kategori:<15} | {nama_kebutuhan:<23} | {nominal:>11} | {saldo:>11} |")
+
 
 def baca_data(filename):
     with open(filename, "r") as file:
@@ -97,6 +123,17 @@ def rekap_data(list_transaksi, pilihan):
     else:
         print("Tidak ada data untuk direkap.")
 
+
+def tampilan_rekap():
+    print("\n\t╔═════════════════════════════════════════════════════╗")
+    print("\t║            >>>>> MENU REKAP DATA <<<<<              ║")
+    print("\t║═════════════════════════════════════════════════════║")
+    print("\t║       1. Rekap data berdasarkan tanggal             ║")
+    print("\t║       2. Rekap data berdasarkan bulan               ║")
+    print("\t║       3. Rekap data berdasarkan tahun               ║")
+    print("\t╚═════════════════════════════════════════════════════╝")
+
+
 def tampilkan_grafik(list_transaksi):
     # Ambil nominal dari setiap transaksi
     nominal_pemasukan = [float(transaksi[3]) for transaksi in list_transaksi if transaksi[1] == 'Pemasukan']
@@ -123,4 +160,15 @@ def tampilkan_grafik(list_transaksi):
     plt.show()
 
 
-
+def keluar():
+    print("\n\n\t╔═════════════════════════════════════════════════════╗")
+    print("\t║                                                     ║")
+    print("\t║           ╔═════════════════════════════╗           ║")
+    print("\t║           ║   Terima kasih telah        ║           ║")
+    print("\t║           ║   menggunakan program ini.  ║           ║")
+    print("\t║           ║                             ║           ║")
+    print("\t║           ║   Semoga hari Anda          ║           ║")
+    print("\t║           ║   menyenangkan!             ║           ║")
+    print("\t║           ╚═════════════════════════════╝           ║")
+    print("\t║                  By : Kelompok B-6                  ║")
+    print("\t╚═════════════════════════════════════════════════════╝")
