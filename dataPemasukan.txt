@@ -1,4 +1,1 @@
-2019-12-21,Isi Saldo,Isi Saldo,50000.0,50000.0
-2010-09-01,Isi Saldo,Isi Saldo,50000.0,50000.0
-2010-10-03,Isi Saldo,Isi Saldo,3000.0,3000.0
-2004-12-10,Isi Saldo,Isi Saldo,20000.0,20000.0
+2024-01-01,Pemasukan,Gaji,1000000.0,1000000.0

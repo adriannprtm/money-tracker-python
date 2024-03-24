@@ -12,7 +12,7 @@ def login():
 
 
 def input_saldo(saldo, list_transaksi):
-    tanggal_input = input("Masukkan tanggal pemasukan (dd-mm-yyyy): ")
+    tanggal_input = input("Masukkan tanggal pemasukan (yyyy-mm-dd): ")
     tanggal = datetime.strptime(tanggal_input, "%Y-%m-%d").date()
     nominal = float(input("Masukkan saldo baru: "))
     saldo += nominal
@@ -20,27 +20,27 @@ def input_saldo(saldo, list_transaksi):
     print("Data saldo berhasil disimpan.")
     # Menulis data transaksi ke file eksternal
     with open("dataPemasukan.txt", "a") as file:
-        file.write(f"{tanggal},{"Isi Saldo"},{"Isi Saldo"},{nominal},{saldo}\n")
-    return saldo
+        file.write(f"{tanggal},{'Isi Saldo'},{'Isi Saldo'},{nominal},{saldo}\n")
+    return saldo  # Mengembalikan saldo baru
 
 
 def pemasukan(saldo, list_transaksi): 
-    tanggal_input = input("Masukkan tanggal pemasukan (dd-mm-yyyy): ")
-    tanggal = datetime.strptime(tanggal_input, "%d-%m-%Y").date()
+    tanggal_input = input("Masukkan tanggal pemasukan (yyyy-mm-dd): ")
+    tanggal = datetime.strptime(tanggal_input, "%Y-%m-%d").date()
     nama_kebutuhan = input("Masukkan nama pemasukan: ")
     nominal = float(input("Masukkan nominal pemasukan: "))
     saldo += nominal
-    list_transaksi.append([tanggal, "Pemasukan", nama_kebutuhan, nominal, saldo])
+    list_transaksi.append([tanggal, 'Pemasukan', nama_kebutuhan, nominal, saldo])
     print("Data pemasukan berhasil disimpan.")
     # Menulis data transaksi ke file eksternal
     with open("dataPemasukan.txt", "a") as file:
-        file.write(f"{tanggal},{"Pemasukan"},{nama_kebutuhan},{nominal},{saldo}\n")
-    return saldo
+        file.write(f"{tanggal},{'Pemasukan'},{nama_kebutuhan},{nominal},{saldo}\n")
+    return saldo  # Mengembalikan saldo baru
 
 
 def pengeluaran(saldo, list_transaksi):
-    tanggal_input = input("Masukkan tanggal pengeluaran (dd-mm-yyyy): ")
-    tanggal = datetime.strptime(tanggal_input, "%d-%m-%Y").date()
+    tanggal_input = input("Masukkan tanggal pengeluaran (yyyy-mm-dd): ")
+    tanggal = datetime.strptime(tanggal_input, "%Y-%m-%d").date()
     nama_kebutuhan = input("Masukkan nama kebutuhan: ")
     nominal = float(input("Masukkan nominal pengeluaran: "))
     saldo -= nominal
@@ -48,8 +48,9 @@ def pengeluaran(saldo, list_transaksi):
     print("Data pengeluaran berhasil disimpan.")
     # Menulis data transaksi ke file eksternal
     with open("dataPengeluaran.txt", "a") as file:
-        file.write(f"{tanggal},{"Pengeluaran"},{nama_kebutuhan},{nominal},{saldo}\n")
-    return saldo
+        file.write(f"{tanggal},{'Pengeluaran'},{nama_kebutuhan},{nominal},{saldo}\n")
+    return saldo  # Mengembalikan saldo baru
+
 
 
 def TampilanList(list_transaksi):
@@ -57,6 +58,7 @@ def TampilanList(list_transaksi):
     print('===========================================================================================')
     print('|    Tanggal      |    Katagori     |     Nama Kebutuhan      |   Nominal   |    Saldo    |')
     print('===========================================================================================')
+    
 
     for transaksi in list_transaksi:
         tanggal, kategori, nama_kebutuhan, nominal, saldo = transaksi
