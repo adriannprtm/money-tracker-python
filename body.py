@@ -131,6 +131,7 @@ def tampilan_rekap():
     print("\t║       1. Rekap data berdasarkan tanggal             ║")
     print("\t║       2. Rekap data berdasarkan bulan               ║")
     print("\t║       3. Rekap data berdasarkan tahun               ║")
+    print("\t║       0. Kembali                                    ║")
     print("\t╚═════════════════════════════════════════════════════╝")
 
 
