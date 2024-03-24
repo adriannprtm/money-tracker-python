@@ -49,6 +49,7 @@ def main():
                 print("1. Rekap data berdasarkan tanggal")
                 print("2. Rekap data berdasarkan bulan")
                 print("3. Rekap data berdasarkan tahun")
+                print("0. Kembali ke Menu")
                 pilihan_rekap = input("Pilih menu rekap data: ")
                 body.rekap_data(list_transaksi, pilihan_rekap)
             elif choice == "4":

@@ -4,7 +4,7 @@ def login():
     username = input("Masukkan username: ")
     password = input("Masukkan password: ")
 
-    if username == "admin" and password == "admin123":
+    if username == "kelompokB6" and password == "123":
         return True
     else:
         return False
@@ -86,6 +86,8 @@ def rekap_data(list_transaksi, pilihan):
     elif pilihan == "3":  # Rekap data berdasarkan tahun
         tahun_input = input("Masukkan tahun rekap (yyyy): ")
         data_rekap = [transaksi for transaksi in list_transaksi if transaksi[0].year == int(tahun_input)]
+    elif pilihan == "0":  # Kembali ke halaman menu
+        return
     else:
         print("Pilihan tidak valid.")
         return
