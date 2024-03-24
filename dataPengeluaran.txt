@@ -1,0 +1,4 @@
+2004-12-21,Isi Saldo,Isi Saldo,50000.0,50000.0
+2004-11-03,Isi Saldo,Isi Saldo,50000.0,50000.0
+2004-10-03,Isi Saldo,Isi Saldo,30000.0,30000.0
+2004-09-10,Isi Saldo,Isi Saldo,20000.0,20000.0
