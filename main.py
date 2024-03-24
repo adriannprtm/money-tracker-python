@@ -38,6 +38,7 @@ def main():
             print("3. Rekap data")
             print("4. Lihat daftar transaksi")
             print("5. Keluar")
+            print("6. Tampilkan Chart")
             choice = input("Pilih menu: ")
 
             if choice == "1":
@@ -56,6 +57,8 @@ def main():
                 body.TampilanList(list_transaksi)
             elif choice == "5":
                 print("Terima kasih!")
+            elif choice == "6":
+                body.tampilkan_grafik(list_transaksi)
                 break
             else:
                 print("Pilihan tidak valid. Silakan coba lagi.")
