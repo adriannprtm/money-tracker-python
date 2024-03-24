@@ -1,16 +1,34 @@
 import matplotlib.pyplot as plt
 from datetime import datetime
+import os
+
 
 def login():
-    print("\n\n\t╔═════════════════════════════════════════════════════╗")
-    print("\t║            $$$$$ MONEY TRACKER $$$$$                ║")
-    print("\t╚═════════════════════════════════════════════════════╝")
-    print("\n\t╔═════════════════════════════════════════════════════╗")
-    print("\t║     ooooooooooooooo  LOGIN  oooooooooooooooo        ║")
-    print("\t║═════════════════════════════════════════════════════║")
-    username = input("\t              Masukkan username: ")
-    password = input("\t              Masukkan password: ")
-    print("\t╚═════════════════════════════════════════════════════╝")
+    print("\n\n\t╔════════════════════════════════════════════════════════════════════════╗")
+    print("\t║   __          __  _                            _______                 ║")
+    print("\t║   \\ \\        / / | |                          |__   __|                ║")
+    print("\t║    \\ \\  /\\  / /__| | ___ ___  _ __ ___   ___     | | ___               ║")
+    print("\t║     \\ \\/  \\/ / _ \\ |/ __/ _ \\| '_ ` _ \\ / _ \\    | |/ _ \\              ║")
+    print("\t║      \\  /\\  /  __/ | (_| (_) | | | | | |  __/    | | (_) |             ║")
+    print("\t║       \\/  \\/ \\___|_|\\___\\___/|_| |_| |_|\\___|    |_|\\___/              ║")
+    print("\t║                                                                        ║")
+    print("\t║                                                                        ║")
+    print("\t║    __  __                          _______             _               ║")
+    print("\t║   |  \\/  |                        |__   __|           | |              ║")
+    print("\t║   | \\  / | ___  _ __   ___ _   _     | |_ __ __ _  ___| | _____ _ __   ║")
+    print("\t║   | |\\/| |/ _ \\| '_ \\ / _ \\ | | |    | | '__/ _` |/ __| |/ / _ \\ '__|  ║")
+    print("\t║   | |  | | (_) | | | |  __/ |_| |    | | | | (_| | (__|   <  __/ |     ║")
+    print("\t║   |_|  |_|\\___/|_| |_|\\___|\\__, |    |_|_|  \\__,_|\\___|_|\\_\\___|_|     ║")
+    print("\t║                             __/ |                                      ║")
+    print("\t║                            |___/                                       ║")
+    print("\t║                                                                        ║")
+    print("\t╚════════════════════════════════════════════════════════════════════════╝")
+    print("\t\t╔═════════════════════════════════════════════════════╗")
+    print("\t\t║     ooooooooooooooo  LOGIN  oooooooooooooooo        ║")
+    print("\t\t║═════════════════════════════════════════════════════║")
+    username = input("\t\t              Masukkan username: ")
+    password = input("\t\t              Masukkan password: ")
+    print("\t\t╚═════════════════════════════════════════════════════╝")
 
     # Validasi username dan password
     if username == "kelompokB6" and password == "123":
@@ -22,16 +40,16 @@ def login():
 
 
 def menu():
-    print("\n\t╔═════════════════════════════════════════════════════╗")
-    print("\t║                >>>>> MENU <<<<<                     ║")
-    print("\t║═════════════════════════════════════════════════════║")
-    print("\t║                1. Pemasukan                         ║")
-    print("\t║                2. Pengeluaran                       ║")
-    print("\t║                3. Rekap Data                        ║")
-    print("\t║                4. Lihat daftar transaksi            ║")
-    print("\t║                5. Grafik                            ║")
-    print("\t║                6. Keluar                            ║")
-    print("\t╚═════════════════════════════════════════════════════╝")
+    print("\n\t\t╔═════════════════════════════════════════════════════╗")
+    print("\t\t║                >>>>> MENU <<<<<                     ║")
+    print("\t\t║═════════════════════════════════════════════════════║")
+    print("\t\t║                1. Pemasukan                         ║")
+    print("\t\t║                2. Pengeluaran                       ║")
+    print("\t\t║                3. Rekap Data                        ║")
+    print("\t\t║                4. Lihat daftar transaksi            ║")
+    print("\t\t║                5. Grafik                            ║")
+    print("\t\t║                6. Keluar                            ║")
+    print("\t\t╚═════════════════════════════════════════════════════╝")
 
 
 def input_saldo(saldo, list_transaksi):
@@ -77,6 +95,7 @@ def pengeluaran(saldo, list_transaksi):
 
 
 def TampilanList(list_transaksi):
+    os.system('cls')
     print("\n\n\t╔═════════════════════════════════════════════════════════════════════════════════════════╗")
     print("\t║                             <<<<  PEMASUKAN/PENGELUARAN  >>>                            ║")
     print("\t╚═════════════════════════════════════════════════════════════════════════════════════════╝")
@@ -125,14 +144,14 @@ def rekap_data(list_transaksi, pilihan):
 
 
 def tampilan_rekap():
-    print("\n\t╔═════════════════════════════════════════════════════╗")
-    print("\t║            >>>>> MENU REKAP DATA <<<<<              ║")
-    print("\t║═════════════════════════════════════════════════════║")
-    print("\t║       1. Rekap data berdasarkan tanggal             ║")
-    print("\t║       2. Rekap data berdasarkan bulan               ║")
-    print("\t║       3. Rekap data berdasarkan tahun               ║")
-    print("\t║       0. Kembali                                    ║")
-    print("\t╚═════════════════════════════════════════════════════╝")
+    print("\n\t\t╔═════════════════════════════════════════════════════╗")
+    print("\t\t║            >>>>> MENU REKAP DATA <<<<<              ║")
+    print("\t\t║═════════════════════════════════════════════════════║")
+    print("\t\t║       1. Rekap data berdasarkan tanggal             ║")
+    print("\t\t║       2. Rekap data berdasarkan bulan               ║")
+    print("\t\t║       3. Rekap data berdasarkan tahun               ║")
+    print("\t\t║       0. Kembali                                    ║")
+    print("\t\t╚═════════════════════════════════════════════════════╝")
 
 
 def tampilkan_grafik(list_transaksi):
@@ -162,14 +181,16 @@ def tampilkan_grafik(list_transaksi):
 
 
 def keluar():
-    print("\n\n\t╔═════════════════════════════════════════════════════╗")
-    print("\t║                                                     ║")
-    print("\t║           ╔═════════════════════════════╗           ║")
-    print("\t║           ║   Terima kasih telah        ║           ║")
-    print("\t║           ║   menggunakan program ini.  ║           ║")
-    print("\t║           ║                             ║           ║")
-    print("\t║           ║   Semoga hari Anda          ║           ║")
-    print("\t║           ║   menyenangkan!             ║           ║")
-    print("\t║           ╚═════════════════════════════╝           ║")
-    print("\t║                  By : Kelompok B-6                  ║")
-    print("\t╚═════════════════════════════════════════════════════╝")
+    os.system('cls')
+    print("\n\n\t\t╔═════════════════════════════════════════════════════╗")
+    print("\t\t║                                                     ║")
+    print("\t\t║           ╔═════════════════════════════╗           ║")
+    print("\t\t║           ║   Terima kasih telah        ║           ║")
+    print("\t\t║           ║   menggunakan program ini.  ║           ║")
+    print("\t\t║           ║                             ║           ║")
+    print("\t\t║           ║   Semoga hari Anda          ║           ║")
+    print("\t\t║           ║   menyenangkan!             ║           ║")
+    print("\t\t║           ╚═════════════════════════════╝           ║")
+    print("\t\t║                  By : Kelompok B-6                  ║")
+    print("\t\t╚═════════════════════════════════════════════════════╝")
+    print("\n\n")

@@ -1,26 +1,12 @@
 """
-FITUR FITUR
-- login
-- input saldo
-- Pemasukan
-  - tanggal
-  - katagori
-  - nama kebutuhan
-  - nominal 
-  - saldo akhir
-- Pengeluaran
-  - tanggal
-  - katagori
-  - nama kebutuhan
-  - nominal 
-  - saldo akhir
-- Pengurutan
-  - tanggal
-  - bulan
-  - tahun
-- menampilkan list pemasukan/pengeluaran
-
+Program : Aplikasi Money Tracker
+Author  : Kelompok B-6
+Anggota : - Adrian Pratama Sasmita
+          - Fadilah Akbar
+          - Devi Febrianti
+          - Muhammad Hasbi
 """
+
 
 import body
 
