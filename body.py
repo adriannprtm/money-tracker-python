@@ -1,15 +1,35 @@
 from datetime import datetime
 
 def login():
-    username = input("Masukkan username: ")
-    password = input("Masukkan password: ")
+    print("\t=======================================================")
+    print("\t|                 MONEY TRACKER                       |")
+    print("\t=======================================================")
+    print("\t|     ooooooooooooooo  LOGIN  oooooooooooooooo        |")
+    print("\t=======================================================")
+    username = input("\t              Masukkan username: ")
+    password = input("\t              Masukkan password: ")
+    print("\t=======================================================")
 
-    # Ganti kondisi ini dengan validasi login yang sesuai dengan kebutuhan Anda
+    # Validasi username dan password
     if username == "admin" and password == "admin123":
+        print("\t            Login berhasil! Selamat datang, Admin!")
         return True
     else:
+        print("\t    Username atau password salah. Silakan coba lagi.")
         return False
 
+def menu():
+    print("\t=======================================================")
+    print("\t|     ooooooooooooooo  MENU  oooooooooooooooo         |")
+    print("\t=======================================================")
+    print("\t|                1. Input saldo                       |")
+    print("\t|                2. Pemasukan                         |")
+    print("\t|                3. Pengeluaran                       |")
+    print("\t|                4. Rekap Data                        |")
+    print("\t|                5. Lihat daftar transaksi            |")
+    print("\t|                6. Keluar                            |")
+    print("\t=======================================================")
+    choice = input("\t        Pilih menu: ")
 
 def input_saldo(saldo, list_transaksi):
     tanggal_input = input("Masukkan tanggal pemasukan (dd-mm-yyyy): ")
@@ -102,3 +122,12 @@ def rekap_data(list_transaksi, pilihan):
     else:
         print("Tidak ada data untuk direkap.")
 
+def tampilan_rekap():
+    print("\t=======================================================")
+    print("\t|          <<<<  MENU REKAP DATA  >>>>                |")
+    print("\t=======================================================")
+    print("\t|       1. Rekap data berdasarkan tanggal             |")
+    print("\t|       2. Rekap data berdasarkan bulan               |")
+    print("\t        3. Rekap data berdasarkan tahun               |")
+    print("\t=======================================================")
+    pilihan_rekap = input("\t       Pilih menu rekap data: ")
