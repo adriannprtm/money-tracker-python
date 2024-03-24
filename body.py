@@ -98,27 +98,29 @@ def rekap_data(list_transaksi, pilihan):
         print("Tidak ada data untuk direkap.")
 
 def tampilkan_grafik(list_transaksi):
-    # Ambil tanggal dan nominal dari setiap transaksi
-    tanggal = [transaksi[0] for transaksi in list_transaksi]
-    nominal = [transaksi[3] for transaksi in list_transaksi]
+    # Ambil nominal dari setiap transaksi
+    nominal_pemasukan = [float(transaksi[3]) for transaksi in list_transaksi if transaksi[1] == 'Pemasukan']
+    nominal_pengeluaran = [float(transaksi[3]) for transaksi in list_transaksi if transaksi[1] == 'Pengeluaran']
 
-    # Mengurutkan data berdasarkan tanggal
-    tanggal, nominal = zip(*sorted(zip(tanggal, nominal)))
+    # Hitung total pemasukan, pengeluaran, dan selisihnya
+    total_pemasukan = sum(nominal_pemasukan)
+    total_pengeluaran = sum(nominal_pengeluaran)
+    selisih = total_pemasukan - total_pengeluaran
 
-    # Konversi tanggal ke format yang dapat ditampilkan pada chart
-    tanggal_str = [tgl.strftime('%d-%m-%Y') for tgl in tanggal]
+    # Buat list label dan data untuk grafik
+    labels = ['Total Pemasukan', 'Total Pengeluaran', 'Selisih (Pemasukan - Pengeluaran)']
+    data = [total_pemasukan, total_pengeluaran, selisih]
 
     # Buat grafik
-    plt.figure(figsize=(10, 6))
-    plt.plot(tanggal_str, nominal, marker='o', linestyle='-')
-    plt.title('Grafik Pemasukan/Pengeluaran')
-    plt.xlabel('Tanggal')
+    plt.figure(figsize=(8, 6))
+    plt.bar(labels, data, color=['blue', 'red', 'green'])
+    plt.title('Total Pemasukan, Pengeluaran, dan Selisih')
     plt.ylabel('Nominal')
-    plt.xticks(rotation=45)  # Putar label tanggal agar lebih mudah dibaca
     plt.grid(True)
     plt.tight_layout()
 
     # Tampilkan grafik
     plt.show()
+
 
 
